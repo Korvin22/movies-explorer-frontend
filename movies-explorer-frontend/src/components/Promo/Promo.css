@@ -1,0 +1,54 @@
+.promo__header {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: #073042;
+}
+
+.promo__link {
+  margin-left: auto;
+  margin-right: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+.promo__link:hover {
+  color: #8b8b8b;
+}
+.promo__button {
+  background-color: #3ddc84;
+  height: 32px;
+  width: 76px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  border: none;
+}
+
+.promo__banner {
+  display: flex;
+  flex-direction: column;
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: #073042;
+}
+.promo__title {
+  align-self: flex-start;
+  max-width: 626px;
+  margin: 50px 0 0 0;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 52px;
+  letter-spacing: -0.04em;
+  text-align: left;
+}
+
+.promo__img {
+  align-self: flex-end;
+  margin: 102px 0 64px 0;
+}

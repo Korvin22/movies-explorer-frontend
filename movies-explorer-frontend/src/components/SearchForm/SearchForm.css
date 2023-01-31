@@ -1,0 +1,69 @@
+.search__form {
+  position: relative;
+  display: flex;
+  margin: 70px 70px 100px 70px;
+  flex-direction: column;
+}
+
+.search__input {
+  border: 1.5px solid #aaaaaa;
+  background-color: black;
+  border-radius: 8px;
+  height: 72px;
+  margin:0;
+  padding:0;
+  opacity:0.2;
+  padding-left:25px;
+  color:white;
+}
+
+.search__button {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  height: 52px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #4285f4;
+  margin: 0;
+  padding:0;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+  border:none;
+}
+
+.search__wrapper {
+    display:flex;
+
+}
+
+.search__radio {
+    color: #3DDC84;
+    background-color: #3DDC84;
+    accent-color: #3DDC84;
+    margin-right:16px;
+    margin-left:18px;
+}
+
+.search__radio_invisible {
+    color: #3DDC84;
+    position:absolute;
+    background-color: #3DDC84;
+    accent-color: #3DDC84;
+    margin-right:16px;
+    margin-left:18px;
+    overflow:hidden;
+    
+}
+
+.search__label {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+       
+}

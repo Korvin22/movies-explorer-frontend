@@ -14,7 +14,9 @@ function Header(props) {
           Сохраненные фильмы
         </Link>
       </div>
-      <img src={profile} />
+      <Link to="/profile">
+        <img src={profile} />
+      </Link>
     </div>
   );
 }

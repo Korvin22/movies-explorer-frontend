@@ -90,3 +90,6 @@
     text-decoration: none;
   }
   
+  .register__link:hover {
+    color:#8b8b8b;
+  }

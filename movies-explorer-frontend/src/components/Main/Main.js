@@ -1,9 +1,13 @@
+import Promo from "../Promo/Promo";
+import AboutProject from "../AboutProject/AboutProject";
 
 function Main(props) {
-    console.log(111)
-    return (
-        <p>111</p>
-    )
+  return (
+    <>
+      <Promo />
+      <AboutProject />
+    </>
+  );
 }
 
-export default Main; 
+export default Main;
