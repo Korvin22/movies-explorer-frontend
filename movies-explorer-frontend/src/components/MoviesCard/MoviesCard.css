@@ -1,6 +1,6 @@
 .cards__card {
-  min-height: 281px;
-  max-width: 364px;
+  height: 281px;
+  width: 364px;
 }
 
 .cards__description {
@@ -34,6 +34,11 @@
   cursor: pointer;
 }
 
+.cards__picture {
+  height: 203px;
+  width: 364px;
+}
+
 .cards__movie-duration {
   font-size: 11px;
   font-weight: 400;
@@ -42,4 +47,27 @@
   text-align: left;
   color: #8B8B8B;
   margin:17px 0 0 0;
+}
+
+
+@media screen and (max-width:984px) {
+  .cards__picture {
+    height:190px;
+    width:339px;
+  }
+  .cards__card {
+    width: 339px;
+  }
+  
+}
+
+@media screen and (max-width:628px) {
+  .cards__picture {
+    height:168px;
+    width:300px;
+  }
+  .cards__card {
+    width: 300px;
+  }
+  
 }

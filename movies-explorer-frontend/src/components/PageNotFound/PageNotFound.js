@@ -12,7 +12,7 @@ function PageNotFound () {
       <p className="not-found__text">
        Страница не найдена
       </p>
-      <p className="not-found__link" ><Link to="/">Назад</Link></p>
+      <p className="not-found__link" ><Link className="not-found__link" to="/">Назад</Link></p>
     </div>
   )
 }

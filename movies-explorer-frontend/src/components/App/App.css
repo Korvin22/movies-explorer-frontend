@@ -22,9 +22,3 @@
   flex-direction: column;
   margin: 0 auto;
 }
-
-@media screen and (max-width: 568px) {
-  .app__container {
-    padding: 28px 0 36px;
-  }
-}

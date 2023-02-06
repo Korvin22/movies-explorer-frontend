@@ -2,7 +2,7 @@ import logo from "../../images/logo.svg";
 import { Link } from "react-router-dom";
 function Login(props) {
   return (
-    <div className="register">
+    <div className="login">
       <img alt="лого" src={logo} className="logo" />
       <div className="register__container">
         <h2 className="register__title">Рады видеть!</h2>
@@ -14,7 +14,7 @@ function Login(props) {
             required
             type="text"
             name="email"
-            className="register__input"
+            className="register__input_login"
             placeholder="Email"
             minLength="2"
             maxLength="30"
@@ -27,7 +27,7 @@ function Login(props) {
             required
             type="password"
             name="password"
-            className="register__input"
+            className="register__input_login"
             placeholder="Пароль"
             id="password"
           />
