@@ -70,6 +70,12 @@
     background-color: black;
     border: none;
   }
+  .header__burger:hover {
+    opacity: 0.8;
+  }
+  .header__burger:focus {
+    opacity: 0.8;
+  }
 
 }
 

@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 function Register(props) {
   return (
     <div className="register">
-      <img alt="лого" src={logo} className="logo" />
+      <Link to="/">
+        <img src={logo} className="logo" alt="logo" />
+      </Link>
       <div className="register__container">
         <h2 className="register__title">Добро пожаловать!</h2>
-        <form className="register__form" name="email-and-password" noValidate>
-          <label for="user-name" className="register__label">
+        <form className="register__form" name="email-and-password">
+          <label htmlFor="user-name" className="register__label">
             Имя
           </label>
           <input
@@ -20,7 +22,7 @@ function Register(props) {
             maxLength="30"
             id="user-name"
           />
-          <label for="email" className="register__label">
+          <label htmlFor="email" className="register__label">
             E-mail
           </label>
           <input
@@ -33,7 +35,7 @@ function Register(props) {
             maxLength="30"
             id="email"
           />
-          <label for="password" className="register__label">
+          <label htmlFor="password" className="register__label">
             Пароль
           </label>
           <input

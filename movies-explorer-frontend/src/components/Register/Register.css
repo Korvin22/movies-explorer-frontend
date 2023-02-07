@@ -63,6 +63,9 @@
   color: white;
   border: none;
 }
+.register__button:hover {
+  opacity: 0.8;
+}
 
 .register__wrapper {
   display: flex;

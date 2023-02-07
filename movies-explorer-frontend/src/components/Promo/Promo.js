@@ -1,12 +1,14 @@
 import Header from "../Header/Header";
 import logo from "../../images/logo.svg";
 import { Link } from "react-router-dom";
-import promo_fig from "../../images/figure_mainpage.svg"
+import promo_fig from "../../images/figure_mainpage.svg";
 function Promo(props) {
   return (
     <>
       <div className="promo__header">
-        <img src={logo} className="logo" alt="Logo"/>
+        <Link to="/">
+          <img src={logo} className="logo" alt="logo" />
+        </Link>
         <Link to="/signup" className="promo__link">
           Регистрация
         </Link>
@@ -18,7 +20,7 @@ function Promo(props) {
         <h1 className="promo__title">
           Учебный проект студента факультета Веб-разработки.
         </h1>
-        <img src={promo_fig} className="promo__img" alt="Banner picture"/>
+        <img src={promo_fig} className="promo__img" alt="Banner picture" />
       </div>
     </>
   );

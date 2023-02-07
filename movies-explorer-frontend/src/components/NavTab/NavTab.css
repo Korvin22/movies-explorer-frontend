@@ -25,8 +25,7 @@
 
 .header__wrapper {
     display:flex;
-    flex-direction: column;
-    margin-top:37%;
+
     align-items: center;
 }
 
@@ -51,4 +50,13 @@
 
   .header__account {
     margin-bottom:21.5%
+  }
+
+  @media screen and (max-width:984px) {
+    .header__wrapper {
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 37%;
+  }
   }

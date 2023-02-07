@@ -6,14 +6,14 @@ import Portfolio from "../Portfolio/Portfolio";
 import Footer from "../Footer/Footer";
 function Main(props) {
   return (
-    <>
+    <main>
       <Promo />
       <AboutProject />
       <Techs />
       <AboutMe />
       <Portfolio />
       <Footer />
-    </>
+    </main>
   );
 }
 

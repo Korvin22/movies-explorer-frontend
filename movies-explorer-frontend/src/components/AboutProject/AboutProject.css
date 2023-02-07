@@ -43,6 +43,7 @@
   display: grid;
   grid-template-columns: 1fr 4fr;
   padding: 0;
+  margin:0;
 }
 
 .project__part {
@@ -61,7 +62,6 @@
   text-align: center;
   padding-left: auto;
   padding-right: auto;
-  display: flex;
   min-width: 100%;
 }
 

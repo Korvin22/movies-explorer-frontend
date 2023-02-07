@@ -6,6 +6,7 @@ function SearchForm(props) {
         className="search__input"
         placeholder="Фильм"
         name="movie"
+        required
       />
       <button className="search__button">Поиск</button>
       <div className="search__wrapper">
