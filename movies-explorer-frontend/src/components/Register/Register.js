@@ -1,6 +1,11 @@
 import logo from "../../images/logo.svg";
 import { Link } from "react-router-dom";
+import {useFormWithValidation} from "../../hooks/UseForm";
+
 function Register(props) {
+
+  const { values, handleChange, errors, isValid, resetForm } =
+  useFormWithValidation();
   return (
     <div className="register">
       <Link to="/">
@@ -21,7 +26,10 @@ function Register(props) {
             minLength="2"
             maxLength="30"
             id="user-name"
+            onChange={handleChange}
+            value={values.name}
           />
+          <span className="register__error">{errors.user}</span>
           <label htmlFor="email" className="register__label">
             E-mail
           </label>
@@ -34,7 +42,10 @@ function Register(props) {
             minLength="2"
             maxLength="30"
             id="email"
+            value={values.email}
+            onChange={handleChange}
           />
+          <span className="register__error">{errors.email}</span>
           <label htmlFor="password" className="register__label">
             Пароль
           </label>
@@ -45,7 +56,10 @@ function Register(props) {
             className="register__input"
             placeholder="Пароль"
             id="password"
+            value={values.password}
+            onChange={handleChange}
           />
+          <span className="register__error">{errors.password}</span>
           <button className="register__button" type="submit">
             Войти
           </button>

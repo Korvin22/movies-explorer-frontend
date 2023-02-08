@@ -8,7 +8,7 @@ import movie_run from "../../images/Погоня.svg";
 
 function SavedMovies(props) {
   return (
-    <>
+    <main>
       <Header />
       <SearchForm />
       <div className="cards">
@@ -17,7 +17,7 @@ function SavedMovies(props) {
             <MovieCard name={"В погоне за Бенкси"} src={movie_run} duration={"1ч 42м"} />
         </div>
       <Footer />
-    </>
+    </main>
   );
 }
 

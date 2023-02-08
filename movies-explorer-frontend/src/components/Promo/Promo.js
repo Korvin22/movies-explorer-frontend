@@ -5,7 +5,7 @@ import promo_fig from "../../images/figure_mainpage.svg";
 function Promo(props) {
   return (
     <>
-      <div className="promo__header">
+      <header className="promo__header">
         <Link to="/">
           <img src={logo} className="logo" alt="logo" />
         </Link>
@@ -15,7 +15,7 @@ function Promo(props) {
         <Link to="/signin">
           <button className="promo__button">Войти</button>
         </Link>
-      </div>
+      </header>
       <div className="promo__banner">
         <h1 className="promo__title">
           Учебный проект студента факультета Веб-разработки.

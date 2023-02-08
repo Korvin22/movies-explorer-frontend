@@ -51,9 +51,7 @@
   margin-bottom: 20px;
 }
 
-.register__input:last-of-type {
-  margin-bottom: 91px;
-}
+
 
 .register__button {
   background-color: #4285f4;
@@ -62,6 +60,7 @@
   height: 45px;
   color: white;
   border: none;
+  margin-top:91px;
 }
 .register__button:hover {
   opacity: 0.8;
@@ -106,6 +105,7 @@
     line-height: 15px;
     letter-spacing: 0em;
     text-align: center;
+    margin-top:167px;
   }
 
   .register {
@@ -114,9 +114,6 @@
 
   }
 
-  .register__input:last-of-type {
-    margin-bottom: 167px;
-  }
 
   .register__link {
     margin-bottom: 30px;

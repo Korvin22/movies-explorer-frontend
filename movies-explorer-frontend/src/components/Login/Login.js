@@ -1,40 +1,19 @@
 import logo from "../../images/logo.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import FormErrors from "../FormErrors/FormErrors";
-import useForm from "../../hooks/UseForm";
+import {useFormWithValidation} from "../../hooks/UseForm"
 
 function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const [isRender, setIsRender] = useState(false);
-  const { values, handleChange, setValues } = useForm({});
-
-  const [errorMail, setErrorEmail] = useState("");
-  const [errorPassword, setErrorPassword] = useState("");
-  const [emailValid, setEmailValid] = useState(false);
-  const [passwordValid, setPasswordValid] = useState(false);
-  const [formValid, setFormValid] = useState(false);
-
-  const handleUserEmail = (e) => {
-    const value = e.target.value;
-    setEmail(value);
-  };
-  const handleUserPassword = (e) => {
-    const value = e.target.value;
-    setPassword(value);
-  };
-  function validateEmail(value) {
-    setEmailValid(value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i));
-  }
-  function validatePassword(value) {
-    setPasswordValid(value.length >= 6);
-  }
 
   function linkRender() {
     setIsRender(true);
   }
+
+  const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -70,9 +49,10 @@ function Login(props) {
             minLength="2"
             maxLength="30"
             id="email"
-            value={email}
-            onChange={handleUserEmail}
+            value={values.email || ""}
+            onChange={handleChange}
           />
+          <p className="register__error">{errors.email}</p>
           <label htmlFor="password" className="register__label">
             Пароль
           </label>
@@ -83,9 +63,10 @@ function Login(props) {
             className="register__input_login"
             placeholder="Пароль"
             id="password"
-            value={password}
-            onChange={handleUserPassword}
+            value={values.password || ""}
+            onChange={handleChange}
           />
+          <p className="register__error">{errors.password}</p>
           <button className="register__button" type="submit">
             Войти
           </button>
