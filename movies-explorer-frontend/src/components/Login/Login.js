@@ -1,28 +1,45 @@
 import logo from "../../images/logo.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import {useFormWithValidation} from "../../hooks/UseForm"
-
+import { useFormWithValidation } from "../../hooks/UseForm";
+import { useNavigate } from "react-router-dom";
+import {apiAuth} from "../../utils/Api.auth";
 function Login(props) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const [userData, setUserData] = useState({});
+  const [authUserData, setAuthUserData] = useState({});
+  const { values, handleChange, errors, isValid, resetForm } =
+    useFormWithValidation();
+  console.log(props);
 
-  const [isRender, setIsRender] = useState(false);
+    function handleUpdateAutharization(data) {
+      console.log(data,111);
+      apiAuth
+        .authorize(data.email, data.password)
+        .then((res) => {
+          localStorage.setItem("token", res.token);
+          console.log(data,111);
+          console.log(localStorage);
 
-  function linkRender() {
-    setIsRender(true);
-  }
+          setUserData({ password: res.password, email: res.email });
+          setAuthUserData({ password: res.password, email: res.email });
+          props.handleLogin();
+          console.log(userData)
+  
+          navigate("/movies");
+        })
+        .catch((err) => console.log(err));
+    }
 
-  const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
 
   function handleSubmit(e) {
     e.preventDefault();
-    props.onUpdateAutharization({
+    handleUpdateAutharization({
       email: values.email,
       password: values.password,
     });
     props.handleLogin();
-    console.log(props.handleLogin);
+    console.log(props.handleLogin());
   }
 
   return (
@@ -42,17 +59,15 @@ function Login(props) {
           </label>
           <input
             required
-            type="text"
+            type="email"
             name="email"
             className="register__input_login"
             placeholder="Email"
-            minLength="2"
-            maxLength="30"
             id="email"
             value={values.email || ""}
             onChange={handleChange}
           />
-          <p className="register__error">{errors.email}</p>
+          <span className="register__error">{errors.email}</span>
           <label htmlFor="password" className="register__label">
             Пароль
           </label>
@@ -66,8 +81,14 @@ function Login(props) {
             value={values.password || ""}
             onChange={handleChange}
           />
-          <p className="register__error">{errors.password}</p>
-          <button className="register__button" type="submit">
+          <span className="register__error">{errors.password}</span>
+          <button
+            className={`${
+              isValid ? "register__button" : "register__button_disabled"
+            }`}
+            type="submit"
+            disabled={`${isValid ? "" : "disabled"}`}
+          >
             Войти
           </button>
         </form>
